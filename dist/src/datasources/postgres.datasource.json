@@ -1,0 +1,10 @@
+{
+    "name": "postgres",
+    "connector": "postgresql",
+    "url": "postgres://postgres:postgres@localhost/nexserver",
+    "host": "loccalhost",
+    "port": 81,
+    "user": "postgres",
+    "password": "postgres",
+    "database": "nexserver"
+}
