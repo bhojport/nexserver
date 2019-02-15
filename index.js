@@ -8,7 +8,6 @@ if (require.main === module) {
     rest: {
       port: process.env.PORT || 8080,
       host: process.env.HOST || '0.0.0.0',
-      url: process.env.URL || '0.0.0.0',
       openApiSpec: {
         // useful when used with OASGraph to locate your application
         setServersFromRequest: true,
