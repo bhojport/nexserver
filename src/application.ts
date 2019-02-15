@@ -28,8 +28,6 @@ export class NexserverApplication extends BootMixin(
       database: process.env.DB_DATABASE,
     });
     this.bind('datasources.db').toClass(PostgresDataSource);
-  
-    console.log(process.env.DATABASE_URL, process.env.DB_PORT, process.env.DB_DATABASE)
 
     // Set up the custom sequence
     this.sequence(MySequence);
