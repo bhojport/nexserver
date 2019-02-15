@@ -11,6 +11,7 @@ if (require.main === module) {
       url: process.env.URL || '0.0.0.0',
       openApiSpec: {
         // useful when used with OASGraph to locate your application
+        servers: [{url: 'http://0.0.0.0:8080'}],
         setServersFromRequest: true,
       },
     },
