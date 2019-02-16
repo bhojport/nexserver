@@ -9,7 +9,7 @@ import { RestApplication } from '@loopback/rest';
 import { ServiceMixin } from '@loopback/service-proxy';
 import * as path from 'path';
 import { MySequence } from './sequence';
-import { PostgresDataSource } from './datasources/postgres.datasource'
+// import { PostgresDataSource } from './datasources/postgres.datasource'
 
 export class NexserverApplication extends BootMixin(
   ServiceMixin(RepositoryMixin(RestApplication)),
@@ -17,17 +17,17 @@ export class NexserverApplication extends BootMixin(
   constructor(options: ApplicationConfig = {}) {
     super(options);
 
-    this.bind('datasources.config.db').to({
-      name: 'postgres',
-      connector: 'postgres',
-      url: process.env.DATABASE_URL,
-      host: process.env.DB_HOST,
-      port: process.env.DB_PORT,
-      user: process.env.DB_USER,
-      password: process.env.DB_PASSWORD,
-      database: process.env.DB_DATABASE,
-    });
-    this.bind('datasources.db').toClass(PostgresDataSource);
+    // this.bind('datasources.config.db').to({
+    //   name: 'postgres',
+    //   connector: 'postgres',
+    //   url: process.env.DATABASE_URL,
+    //   host: process.env.DB_HOST,
+    //   port: process.env.DB_PORT,
+    //   user: process.env.DB_USER,
+    //   password: process.env.DB_PASSWORD,
+    //   database: process.env.DB_DATABASE,
+    // });
+    // this.bind('datasources.db').toClass(PostgresDataSource);
 
     // Set up the custom sequence
     this.sequence(MySequence);

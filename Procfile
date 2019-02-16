@@ -1,1 +1,1 @@
-web: npm ci && node index.js
+web: node index.js
